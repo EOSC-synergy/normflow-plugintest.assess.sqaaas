@@ -1,0 +1,78 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: feature/Ophidia
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/PalomoIFCA/normflow-plugintest:
+      branch: mlflow-intertwin-demo
+      repo: https://github.com/PalomoIFCA/normflow-plugintest
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/PalomoIFCA/normflow-plugintest git:
+        commands:
+        - /usr/bin/env sh .sqa/script.beady-lemon-rottweiler.sh
+        container: qc.acc_chewy-denim-chihuahua
+  QC.Doc:
+    repos:
+      github.com/PalomoIFCA/normflow-plugintest find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.foggy-coral-tamarin.sh
+        container: qc.doc_jumpy-burgundy-goose
+      github.com/PalomoIFCA/normflow-plugintest git:
+        commands:
+        - /usr/bin/env sh .sqa/script.homely-magnolia-ocelot.sh
+        container: qc.doc_droopy-teal-booby
+      github.com/PalomoIFCA/normflow-plugintest markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.beady-wisteria-gorilla.sh
+        container: qc.doc_snappy-persimmon-earwig
+  QC.Lic:
+    repos:
+      github.com/PalomoIFCA/normflow-plugintest licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.crappy-firebrick-turkey.sh
+        container: qc.lic_bumpy-smalt-mule
+  QC.Met:
+    repos:
+      github.com/PalomoIFCA/normflow-plugintest cff-converter-python:
+        commands:
+        - /usr/bin/env sh .sqa/script.shaky-olive-quoll.sh
+        container: qc.met_hilly-xanthic-lizard
+  QC.Sec:
+    repos:
+      github.com/PalomoIFCA/normflow-plugintest bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.grumpy-purple-woodlouse.sh
+        container: qc.sec_gimpy-gamboge-liger
+  QC.Sty:
+    repos:
+      github.com/PalomoIFCA/normflow-plugintest flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.seedy-goldenrod-greyhound.sh
+        container: qc.sty_fuzzy-flax-crane
+      github.com/PalomoIFCA/normflow-plugintest hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.lousy-ochre-olm.sh
+        container: qc.sty_pretty-jade-tortoise
+      github.com/PalomoIFCA/normflow-plugintest jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.snappy-brown-jaguar.sh
+        container: qc.sty_cozy-smalt-lemur
+  QC.Uni:
+    repos:
+      github.com/PalomoIFCA/normflow-plugintest commands:
+        commands:
+        - /usr/bin/env sh .sqa/script.paltry-gold-ragdoll.sh
+        container: qc.uni_gimpy-corn-hummingbird
+  QC.Ver:
+    repos:
+      github.com/PalomoIFCA/normflow-plugintest get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.boozy-lime-liger.sh
+        container: qc.ver_bluesy-buff-shark
+timeout: 5400
