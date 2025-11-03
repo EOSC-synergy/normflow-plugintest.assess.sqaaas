@@ -5,8 +5,5 @@
 
 (
 cd github.com/PalomoIFCA/normflow-plugintest &&
-    python -m venv .venv &&&&
-    source .venv/bin/activate &&&&
-    .venv/bin/pip install &&&&
-    .venv/bin/pytest -v tests/
+    commands: | python -m venv .venv .venv/bin/pip install . .venv/bin/pytest -v tests/
 )

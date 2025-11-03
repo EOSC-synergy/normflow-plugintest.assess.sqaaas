@@ -15,64 +15,64 @@ sqa_criteria:
     repos:
       github.com/PalomoIFCA/normflow-plugintest git:
         commands:
-        - /usr/bin/env sh .sqa/script.lumpy-magnolia-argentino.sh
-        container: qc.acc_homely-burgundy-mayfly
+        - /usr/bin/env sh .sqa/script.chummy-teal-setter.sh
+        container: qc.acc_foggy-fuchsia-dachshund
   QC.Doc:
     repos:
       github.com/PalomoIFCA/normflow-plugintest find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.pasty-lilac-octopus.sh
-        container: qc.doc_homey-orange-bandicoot
+        - /usr/bin/env sh .sqa/script.clammy-buff-caracal.sh
+        container: qc.doc_cozy-harlequin-alligator
       github.com/PalomoIFCA/normflow-plugintest git:
         commands:
-        - /usr/bin/env sh .sqa/script.ready-brown-wrasse.sh
-        container: qc.doc_ready-chartreuse-monster
+        - /usr/bin/env sh .sqa/script.shabby-chartreuse-chipmunk.sh
+        container: qc.doc_craggy-puce-bee
       github.com/PalomoIFCA/normflow-plugintest markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.pokey-ivory-chicken.sh
-        container: qc.doc_beady-cinnabar-duck
+        - /usr/bin/env sh .sqa/script.boozy-charcoal-akita.sh
+        container: qc.doc_foggy-denim-capuchin
   QC.Lic:
     repos:
       github.com/PalomoIFCA/normflow-plugintest licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.muzzy-linen-uakari.sh
-        container: qc.lic_squirrely-celadon-capybara
+        - /usr/bin/env sh .sqa/script.boozy-scarlet-llama.sh
+        container: qc.lic_snippy-buff-squid
   QC.Met:
     repos:
       github.com/PalomoIFCA/normflow-plugintest cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.fuzzy-smalt-boar.sh
-        container: qc.met_jumpy-brass-alligator
+        - /usr/bin/env sh .sqa/script.flabby-azure-otter.sh
+        container: qc.met_goopy-myrtle-urchin
   QC.Sec:
     repos:
       github.com/PalomoIFCA/normflow-plugintest bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.flimsy-persimmon-grasshopper.sh
-        container: qc.sec_crappy-bistre-gibbon
+        - /usr/bin/env sh .sqa/script.thirsty-sangria-bulldog.sh
+        container: qc.sec_sickly-coral-ostrich
   QC.Sty:
     repos:
       github.com/PalomoIFCA/normflow-plugintest flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.droopy-pear-kudu.sh
-        container: qc.sty_scanty-green-serval
+        - /usr/bin/env sh .sqa/script.muggy-mauve-lion.sh
+        container: qc.sty_shaggy-sangria-loon
       github.com/PalomoIFCA/normflow-plugintest hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.greasy-alizarin-barracuda.sh
-        container: qc.sty_queasy-sangria-macaque
+        - /usr/bin/env sh .sqa/script.scanty-myrtle-urchin.sh
+        container: qc.sty_baggy-gamboge-fossa
       github.com/PalomoIFCA/normflow-plugintest jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.trippy-gold-hyrax.sh
-        container: qc.sty_hazy-razzmatazz-crane
+        - /usr/bin/env sh .sqa/script.bumpy-jade-dingo.sh
+        container: qc.sty_sunny-saffron-bullfrog
   QC.Uni:
     repos:
       github.com/PalomoIFCA/normflow-plugintest commands:
         commands:
-        - /usr/bin/env sh .sqa/script.tasty-salmon-terrier.sh
-        container: qc.uni_stuffy-red-hound
+        - /usr/bin/env sh .sqa/script.gloppy-chestnut-akita.sh
+        container: qc.uni_smelly-viridian-dog
   QC.Ver:
     repos:
       github.com/PalomoIFCA/normflow-plugintest get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.crappy-crimson-lionfish.sh
-        container: qc.ver_fuzzy-emerald-reindeer
+        - /usr/bin/env sh .sqa/script.sloppy-mustard-otter.sh
+        container: qc.ver_shaggy-cardinal-chin
 timeout: 5400
